@@ -8,3 +8,12 @@ export async function POST(request:Request){
         return Response.json(result);
 
 }
+
+export async function GET(request:Request){
+    const visibleIn = new URL(request.url).searchParams.get('visibleIn');
+    const orderField = new URL(request.url).searchParams.get('orderField');
+    await client.connect();
+    const result = await client.query(`select * from post inner join users on post.createdby=users.email where visiblein='${visibleIn}' order by ${orderField} desc;`);
+    await client.end();
+    return Response.json(result.rows)
+}
