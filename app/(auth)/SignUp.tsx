@@ -59,7 +59,7 @@ export default function SignUp() {
                                 image: response?.url
                             });
                             // Route to the home screen
-                            router.push('/landing');
+                            router.push('/');
                         } else {
                             ToastAndroid.show('Something went wrong', ToastAndroid.BOTTOM);
                         }

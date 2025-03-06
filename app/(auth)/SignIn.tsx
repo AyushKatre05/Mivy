@@ -45,7 +45,7 @@ export default function SignIn() {
           setLoading(false);
           //console.log(user);
           // Route to the home screen
-          router.push('/landing');
+          router.push('/');
         }
 
       })
