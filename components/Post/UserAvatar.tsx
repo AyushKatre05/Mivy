@@ -2,6 +2,7 @@ import { View, Text, Image } from "react-native";
 import React from "react";
 import Colors from "@/data/Colors";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
+import moment from 'moment'
 
 type USER_AVATAR = {
   name: string;
@@ -30,7 +31,7 @@ const UserAvatar = ({ name, image, date }: USER_AVATAR) => {
         />
         <View>
           <Text style={{ fontSize: 18, fontWeight: "bold" }}>{name}</Text>
-          <Text style={{ color: Colors.GRAY }}>{date}</Text>
+          <Text style={{ color: Colors.GRAY }}>{ moment(date).fromNow()}</Text>
         </View>
       </View>
         <FontAwesome name="ellipsis-v" size={24} color="black" />
