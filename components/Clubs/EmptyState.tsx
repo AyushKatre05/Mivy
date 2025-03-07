@@ -11,7 +11,7 @@ const EmptyState = () => {
       <Image source={require('../../assets/images/no-club.png')}  style={{height:170,width:170}} />
 
         <Text style={{fontSize:22,textAlign:'center', color:Colors.GRAY}}>You are not following any Clubs</Text>
-        <Buttontext text='Explore Clubs' onPress={()=>router.push('/explore-clubs')} ></Buttontext>
+        <Buttontext text='Explore Clubs' onPress={() => router.push('/explore-clubs')} loading={false} ></Buttontext>
 
     </View>
   )
